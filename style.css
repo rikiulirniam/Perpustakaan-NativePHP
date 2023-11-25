@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,100;1,500&family=Poppins:wght@800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+  /* border: 1px solid greenyellow; */
+}
+/* Set Default tag */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Login Page */
+.heading {
+  font-weight: 600;
+}
+.bg-login {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+  filter: blur(2px);
+}
+.img-guest {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.img-guest i {
+  font-size: 5em;
+}
+.form-login {
+  color: white;
+  background-color: #1d1d1dbe;
+  width: 35%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(3px);
+  padding: 10px;
+}
+.form-login div input {
+  width: 18em;
+  height: 2.8em;
+  padding-left: 2em;
+  font-size: 1.1em;
+}
+.form-login input[value="Login"] {
+  width: 20em;
+  height: 2.7em;
+}
+
+/* Koleksi */
+
+header {
+  background-color: #012269;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-heading {
+  font-size: 0.85em;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+.sub-drop {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 2.8em;
+  background-color: #012269;
+  border-top: 0.3em solid orange;
+  z-index: 5;
+  animation: fadeIn 0.3s ease-out;
+}
+.sub-drop a {
+  font-size: 0.8em;
+  padding: 0.8em 4em 0.8em 1.2em;
+}
+.sub-drop a:hover {
+  background-color: #001a51;
+}
+.nav-drop-par .nav-drop:hover .sub-drop {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.search-bar {
+  border: white solid 2px;
+  border-radius: 5em;
+}
+
+.btn-search:hover .fa-search {
+  color: transparent;
+  -webkit-text-stroke: white 0.5px;
+}
+.search-column {
+  background: transparent;
+  color: white;
+  border: transparent solid 2px;
+  border-right: white solid 2px;
+  border-radius: 5em 1em 1em 5em;
+  font-size: 0.8em;
+  padding: 0.5em 1.2em;
+}
+.bar-login:hover h6 {
+  text-decoration: underline;
+}
+/* Content */
+.header-content {
+  border-bottom: 2px black solid;
+}
+.header-content .act-buku {
+  border: black 1px solid;
+  border-radius: 5px;
+}
+.act-buku .category-act {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+}
+.category-act a {
+  margin: 0 !important;
+  padding: 0.4em 1em;
+}
+.header-content .act-buku:hover .category-act {
+  display: flex;
+}
+.category-act a:hover {
+  background-color: rgb(163, 163, 163);
+}
+.book-list-all {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 0.5em;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.img-cover {
+  object-fit: contain;
+  width: 30%;
+  height: 100%;
+}
+.book-title:hover {
+  text-decoration: underline;
+}
+.edit-input {
+  width: 20em;
+  /* font-size: 0.5em; */
+}
+
+.book-detail {
+  width: 100%;
+}
+.content-book-detail {
+  width: 100%;
+}
+.left-book-detail {
+  width: 45%;
+}
+.right-book-detail {
+  width: 45%;
+}
+.right-book-detail textarea {
+  width: 100%;
+  height: 100%;
+}
